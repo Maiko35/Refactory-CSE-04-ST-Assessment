@@ -1,0 +1,103 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title RIM Aviation | Online Flight Booking Form
+  link(rel='stylesheet' href='./css/bootstrap.css')
+  link(rel='stylesheet' href='./css/style.css')
+header
+  img(src='./images/Header.PNG' alt='online-booking-form-header')
+.container.needs-validation
+  form.needs-validation(novalidate='' action='/form' method='POST')
+    .row.g-3
+      .col-4
+        .card
+          .card-body
+            h5.card-title PASSENGER INFORMATION
+            .row.g-3
+              .col-12.asteric
+                label.form-label(for='fullName') Full Name
+                input#inputName4.form-control(type='text' name='fullName' required='')
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='gender') Gender
+                select#gender.form-control(type='text' name='gender' required='')
+                  option(value='') Select
+                  option(value='male') Male
+                  option(value='female') Female
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label.required(for='dateOfBirth') Date of Birth
+                input#dateOfBirth.form-control(type='date' name='dateOfBirth' required='')
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='nationality') Nationality
+                input#nationality.form-control(type='text' placeholder='' name='nationality' required='')
+                .invalid-feedback Invalid field
+      .col-4
+        .card
+          .card-body
+            h5.card-title CONTACT INFORMATION
+            .row.g-3
+              .col-12.asteric
+                label.form-label.required(for='phoneNumber')
+                  | Phone
+                  | Number
+                input#phoneNumber.form-control(type='number' name='phoneNumber' required='')
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='inputEmail') Email Address
+                input#inputEmail4.form-control(type='email' name='inputEmail' required='')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='poboxNumber') P.O.Box Number
+                input#poboxNumber.form-control(type='text' name='poboxNumber' required='')
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='emergency') Emergency Phone Number
+                input#emergency.form-control(type='number' placeholder='' name='emergency' required='')
+                .invalid-feedback Invalid field
+      .col-4
+        .card
+          .card-body
+            h5.card-title FLIGHT INFORMATION
+            .row.g-3
+              .col-12.asteric
+                label.form-label(for='passportNo') Passport Number
+                input.form-control(type='text' id='passportNo.' name='passportNo' required='') 
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='visa') Visa Document
+                input#visaFile.form-control(type='file' name='visa' required='')
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='departure') Departure City
+                input#departure.form-control(type='text' name='departure' required='')
+                .invalid-feedback Invalid field
+              .col-12.asteric
+                label.form-label(for='destination') Destination City
+                input#destination.form-control(type='text' placeholder='' name='destination' required='')
+        br
+    .row
+      .col
+      .col
+      .col-4
+        .d-grid.gap-2
+          button.btn.btn-primary(type='submit' style='background-color: red; color: white; border-color: white;') Submit
+script.
+  (function () {
+  'use strict'
+  
+  var forms = document.querySelectorAll('.needs-validation')
+  
+  Array.prototype.slice.call(forms)
+  .forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+  if (!form.checkValidity()) {
+  event.preventDefault()
+  event.stopPropagation()
+  }
+  form.classList.add('was-validated')
+  }, false)
+  })
+  })()

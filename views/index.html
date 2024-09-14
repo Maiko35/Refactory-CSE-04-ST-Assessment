@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIM Aviation | Online Flight Booking Form</title>
+
+
+    <link rel="stylesheet" href="/public/css/bootstrap.css">
+    <link rel="stylesheet" href="/public/css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <img src="/public/images/Header.PNG" alt="online-booking-form-header">
+    </header>
+    <style>
+        .required input:after {
+            content: "*";
+        }
+    </style>
+
+
+    <div class="container">
+        <form action="" method="POST" class="needs-validation">
+            <div class="row g-3">
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">PASSENGER INFORMATION</h5>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="inputName4" class="form-label required" required="">Full Name</label>
+                                    <input type="text" class="form-control" id="inputName4">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="gender" class="form-label" required="">Gender</label>
+                                    <select class="form-control" id="gender" type="text" name="gender" required="">
+                                        <option value="">Select</option>
+                                        <option value="male">Male</option>
+                                        <option value="female">Female</option>
+                                    </select>
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="dateOfBirth" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="dateOfBirth">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+
+                                    <label for="nationality" class="form-label">Nationality</label>
+                                    <input type="text" class="form-control" id="nationality" placeholder="">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="col-4">
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">CONTACT INFORMATION</h5>
+
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="phoneNumber" class="form-label required needs-validation">Phone
+                                        Number</label>
+                                    <input type="number" class="form-control" id="phoneNumber">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputEmail4" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="inputEmail4">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="poboxNumber" class="form-label">P.O.Box Number</label>
+                                    <input type="text" class="form-control" id="poboxNumber">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                    <div class="col-12">
+                                        <label for="emergency" class="form-label">Emergency Phone Number</label>
+                                        <input type="number" class="form-control" id="emergency" placeholder="">
+                                        <div class="invalid-feedback">Invalid field</div>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">FLIGHT INFORMATION</h5>
+
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="inputNanme4" class="form-label">Passport Number</label>
+                                    <input type="number" class="form-control" id="passportNo.">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputEmail4" class="form-label">Visa Document</label>
+                                    <input type="file" class="form-control" id="visaFile">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="inputPassword4" class="form-label">Departure City</label>
+                                    <input type="text" class="form-control" id="departure">
+                                    <div class="invalid-feedback">Invalid field</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="destination" class="form-label">Destination City</label>
+                                    <input type="text" class="form-control" id="destination" placeholder="">
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <br>
+
+                </div>
+
+
+
+
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col-4">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary" type="submit"
+                            style="background-color: red; color: white; border-color: white;">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+
+
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+
+    </script>
+</body>
+
+</html>

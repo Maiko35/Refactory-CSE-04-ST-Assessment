@@ -1,0 +1,13 @@
+.form{
+  display: grid;
+}
+
+.asteric label:after {
+  content: "*";
+  color: red;
+}
+
+.invalid-feedback{
+  border-color: white;
+  border: 0ch;
+}

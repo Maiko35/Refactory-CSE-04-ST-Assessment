@@ -1,0 +1,88 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title RIM Aviation | Online Flight Booking Form
+  link(rel='stylesheet' href='./css/bootstrap.css')
+  link(rel='stylesheet' href='./css/style.css')
+header
+  img(src='./images/Header.PNG' alt='online-booking-form-header')
+.container
+  form(action='')
+    .row.g-3
+      .col-4
+        .card
+          .card-body
+            h5.card-title PASSENGER INFORMATION
+            .row.g-3
+              .col-12
+                label.form-label(for='inputName4' aria-required='*') Full Name
+                input#inputName4.form-control(type='text')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='gender' aria-required='') Gender
+                select#gender.form-control(type='text' name='gender' required='')
+                  option(value='') Select
+                  option(value='male') Male
+                  option(value='female') Female
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='dateOfBirth') Date of Birth
+                input#dateOfBirth.form-control(type='date')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='nationality') Nationality
+                input#nationality.form-control(type='text' placeholder='')
+                .invalid-feedback Invalid field
+      .col-4
+        .card
+          .card-body
+            h5.card-title CONTACT INFORMATION
+            .row.g-3
+              .col-12
+                label.form-label(for='phoneNumber') Phone Number
+                input#phoneNumber.form-control(type='number')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='inputEmail4') Email Address
+                input#inputEmail4.form-control(type='email')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='poboxNumber') P.O.Box Number
+                input#poboxNumber.form-control(type='text')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='emergency') Emergency Phone Number
+                input#emergency.form-control(type='number' placeholder='')
+                .invalid-feedback Invalid field
+      .col-4
+        .card
+          .card-body
+            h5.card-title FLIGHT INFORMATION
+            .row.g-3
+              .col-12
+                label.form-label(for='inputNanme4') Passport Number
+                input.form-control(type='number' id='passportNo.')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='inputEmail4') Visa Document
+                input#visaFile.form-control(type='file')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='inputPassword4') Departure City
+                input#departure.form-control(type='text')
+                .invalid-feedback Invalid field
+              .col-12
+                label.form-label(for='destination') Destination City
+                input#destination.form-control(type='text' placeholder='')
+        br
+    .row
+      .col
+      .col-4
+        .d-grid.gap-2
+          a.btn.btn-outline-success(type='button' style='border-color: green; background-color: white;' href='/form') Form has been submitted successfully
+      .col
+      .col-4
+        .d-grid.gap-2
+          button.btn.btn-primary(type='submit' style='background-color: red; color: white; border-color: white;') Submit
+script.
